@@ -18,21 +18,21 @@ void format_uptime(unsigned long seconds, char *out, size_t out_size)
     out[0] = '\0';  // start empty
 
     if (days > 0) {
-        snprintf(buf, sizeof(buf), "%lud", days);
+        snprintf(buf, sizeof(buf), "%02lud ", days);
         strncat(out, buf, out_size - strlen(out) - 1);
     }
 
     if (hours > 0) {
-        snprintf(buf, sizeof(buf), "%luh", hours);
+        snprintf(buf, sizeof(buf), "%02luh ", hours);
         strncat(out, buf, out_size - strlen(out) - 1);
     }
 
     if (minutes > 0) {
-        snprintf(buf, sizeof(buf), "%lum", minutes);
+        snprintf(buf, sizeof(buf), "%02lum ", minutes);
         strncat(out, buf, out_size - strlen(out) - 1);
     }
 
     // Always show seconds, even if zero
-    snprintf(buf, sizeof(buf), "%lus", secs);
+    snprintf(buf, sizeof(buf), "%02lus", secs);
     strncat(out, buf, out_size - strlen(out) - 1);
 }
