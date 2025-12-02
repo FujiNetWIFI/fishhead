@@ -1,6 +1,6 @@
 # fishhead
 
-It's time to write your docs about YOUR AWESOME APP!
+A simple example of using fujinet-lib and fujinet-build-tools to write a simple monitoring app for Fisheye servers.
 
 ## building
 
